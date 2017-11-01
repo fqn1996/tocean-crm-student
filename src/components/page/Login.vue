@@ -1,18 +1,23 @@
 <template>
     <div class="login-wrap">
-        <div class="ms-title">后台管理系统</div>
+        <div class="ms-title">学生管理系统</div>
         <div class="ms-login">
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
                 <el-form-item prop="username">
-                    <el-input v-model="ruleForm.username" placeholder="username"></el-input>
+                    <el-input v-model="ruleForm.username" placeholder="请输入学号"></el-input>
                 </el-form-item>
                 <el-form-item prop="password">
-                    <el-input type="password" placeholder="password" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
+                    <el-input type="password" placeholder="请输入密码" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
                 </el-form-item>
-                <div class="login-btn">
-                    <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
-                </div>
-                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 用户名和密码随便填。</p>
+                <el-form-item>
+                    <div class="login-btn">
+                        <el-button type="primary" @click="submitForm('ruleForm')">学生登录</el-button>
+                    </div>
+                </el-form-item>
+                <!--<div class="login-btn">-->
+                <!--<el-button type="primary" @click="visitorSubmitForm">游客登录</el-button>-->
+                <!--</div>-->
+                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 学号和密码随便填。</p>
             </el-form>
         </div>
     </div>
@@ -28,10 +33,10 @@
                 },
                 rules: {
                     username: [
-                        { required: true, message: '请输入用户名', trigger: 'blur' }
+                        { required: true, message: '学号不能为空', trigger: 'blur' }
                     ],
                     password: [
-                        { required: true, message: '请输入密码', trigger: 'blur' }
+                        { required: true, message: '密码不能为空', trigger: 'blur' }
                     ]
                 }
             }
@@ -48,7 +53,10 @@
                         return false;
                     }
                 });
-            }
+            },
+//            visitorSubmitForm:function(){
+//                      this.$router.push('/VisitorHome');
+//            }
         }
     }
 </script>
@@ -74,7 +82,7 @@
         left:50%;
         top:50%;
         width:300px;
-        height:160px;
+        height:200px;
         margin:-150px 0 0 -190px;
         padding:40px;
         border-radius: 5px;
