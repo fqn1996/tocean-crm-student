@@ -78,43 +78,43 @@
                         title: '学员信息查询',
                         subs: [
                             {
-                                index: 'basetable',
+                                index: 'StudentFiles',
                                 title: '学员档案'
                             },
                             {
-                                index: 'basetable',
+                                index: 'AttendanceCheck',
                                 title: '考勤记录'
                             },
                             {
-                                index: 'basetable',
+                                index: 'DisciplinaryRecords',
                                 title: '违规记录'
                             },
                             {
-                                index: 'basetable',
+                                index: 'PraiseRecord',
                                 title: '表扬记录'
                             },
                             {
-                                index: 'basetable',
+                                index: 'Homework',
                                 title: '作业完成情况'
                             },
                             {
-                                index: 'basetable',
+                                index: 'Assessment',
                                 title: '项目考勤情况'
                             },
                             {
-                                index: 'basetable',
+                                index: 'Management',
                                 title: '班级管理积极性'
                             },
                             {
-                                index: 'basetable',
+                                index: 'Speech',
                                 title: '演讲查询'
                             },
                             {
-                                index: 'basetable',
+                                index: 'Groupdiscussion',
                                 title: '分组讨论查询'
                             },
                             {
-                                index: 'basetable',
+                                index: 'Score',
                                 title: '综合考评分'
                             },
 
