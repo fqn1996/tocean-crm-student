@@ -51,6 +51,7 @@ export default new Router({
 }
 ]
 },
+
 {
     path: '/VisitorHome',
         component: resolve => require(['../components/common/VisitorHome.vue'], resolve)
