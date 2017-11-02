@@ -31,11 +31,11 @@
             </el-table-column>
             <el-table-column prop="name" label="学员" width="120">
             </el-table-column>
-            <el-table-column prop="timeF" label="组长" width="150">
+            <el-table-column prop="king" label="组长" width="150">
             </el-table-column>
             <el-table-column prop="class" label="班级"  width="120">
             </el-table-column>
-            <el-table-column prop="timeH" label="分组情况" width="150">
+            <el-table-column prop="group" label="分组情况" width="150">
             </el-table-column>
             <el-table-column label="状态":formatter="formatter">
             </el-table-column>
@@ -73,15 +73,15 @@
                 return self.tableData.filter(function(d){
                     let is_del = false;
                     for (let i = 0; i < self.del_list.length; i++) {
-                        if(d.name === self.del_list[i].name){
+                        if(d.no === self.del_list[i].no){
                             is_del = true;
                             break;
                         }
                     }
                     if(!is_del){
-                        if(d.class.indexOf(self.select_cate) > -1 &&
-                            (d.name.indexOf(self.select_word) > -1 ||
-                            d.class.indexOf(self.select_word) > -1)
+                        if(d.date.indexOf(self.select_cate) > -1 &&
+                            (d.no.indexOf(self.select_word) > -1 ||
+                            d.date.indexOf(self.select_word) > -1)
                         ){
                             return d;
                         }
