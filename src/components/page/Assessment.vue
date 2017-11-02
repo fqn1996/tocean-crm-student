@@ -24,14 +24,13 @@
             </el-table-column>
             <el-table-column prop="class" label="班级"  width="120">
             </el-table-column>
-            <el-table-column prop="" label="项目" width="150">
+            <el-table-column prop="class1" label="项目" width="150">
             </el-table-column>
-            <el-table-column prop="" label="考核日期" width="150">
+            <el-table-column prop="times" label="考核日期" width="150">
             </el-table-column>
-            <el-table-column prop="" label="考核类型":formatter="formatter">
+            <el-table-column prop="title" label="考核类型":formatter="formatter">
             </el-table-column>
-            <el-table-column label="分数" width="150">
-
+            <el-table-column prop="score" label="分数" width="150">
             </el-table-column>
         </el-table>
         <div class="pagination">

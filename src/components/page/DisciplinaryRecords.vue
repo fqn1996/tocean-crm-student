@@ -19,17 +19,17 @@
         </div>
         <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
 
-            <el-table-column prop="date" label="序号" sortable width="180">
+            <el-table-column prop="no" label="序号" sortable width="180">
             </el-table-column>
             <el-table-column prop="name" label="学员" width="120">
             </el-table-column>
             <el-table-column prop="class" label="班级"  width="120">
             </el-table-column>
-            <el-table-column prop="" label="违纪时间" width="150">
+            <el-table-column prop="drtime" label="违纪时间" width="150">
             </el-table-column>
-            <el-table-column prop="" label="违纪情况" width="150">
+            <el-table-column prop="drting" label="违纪情况" width="150">
             </el-table-column>
-            <el-table-column label="违纪态度":formatter="formatter">
+            <el-table-column prop="zt" label="违纪态度":formatter="formatter">
 
             </el-table-column>
         </el-table>
