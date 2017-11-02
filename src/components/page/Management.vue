@@ -17,17 +17,17 @@
         </div>
         <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
 
-            <el-table-column prop="date" label="序号" sortable width="180">
+            <el-table-column prop="no" label="序号" sortable width="180">
             </el-table-column>
             <el-table-column prop="name" label="学员" width="120">
             </el-table-column>
             <el-table-column prop="class" label="班级"  width="120">
             </el-table-column>
-            <el-table-column prop="" label="参与考评次数" width="150">
+            <el-table-column prop="sum" label="参与考评次数" width="150">
             </el-table-column>
-            <el-table-column prop="" label="有效次数":formatter="formatter">
+            <el-table-column prop="num" label="有效次数":formatter="formatter">
             </el-table-column>
-            <el-table-column label="分数" width="150">
+            <el-table-column prop="score" label="分数" width="150">
 
             </el-table-column>
         </el-table>

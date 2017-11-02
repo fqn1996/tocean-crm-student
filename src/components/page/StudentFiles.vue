@@ -23,19 +23,19 @@
             <el-button type="primary" icon="search" @click="search">搜索</el-button>
         </div>
         <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
-            <el-table-column prop="name" label="序号" width="120">
+            <el-table-column prop="no" label="序号" width="120">
             </el-table-column>
             <el-table-column prop="name" label="学员" width="120">
             </el-table-column>
             <el-table-column prop="class" label="班级"  width="120">
             </el-table-column>
-            <el-table-column prop="timeH" label="学号" width="180">
+            <el-table-column prop="xuehao" label="学号" width="180">
             </el-table-column>
-            <el-table-column prop="timeF" label="性别" width="150">
+            <el-table-column prop="sex" label="性别" width="150">
             </el-table-column>
-            <el-table-column prop="timeF" label="学历" width="150">
+            <el-table-column prop="xueli" label="学历" width="150">
             </el-table-column>
-            <el-table-column label="联系电话":formatter="formatter">
+            <el-table-column prop="phone" label="联系电话":formatter="formatter">
 
             </el-table-column>
         </el-table>
@@ -72,15 +72,15 @@
                 return self.tableData.filter(function(d){
                     let is_del = false;
                     for (let i = 0; i < self.del_list.length; i++) {
-                        if(d.name === self.del_list[i].name){
+                        if(d.no === self.del_list[i].no){
                             is_del = true;
                             break;
                         }
                     }
                     if(!is_del){
-                        if(d.class.indexOf(self.select_cate) > -1 &&
-                            (d.name.indexOf(self.select_word) > -1 ||
-                            d.class.indexOf(self.select_word) > -1)
+                        if(d.name.indexOf(self.select_cate) > -1 &&
+                            (d.no.indexOf(self.select_word) > -1 ||
+                            d.name.indexOf(self.select_word) > -1)
                         ){
                             return d;
                         }

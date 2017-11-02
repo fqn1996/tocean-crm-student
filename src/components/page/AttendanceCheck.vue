@@ -37,7 +37,7 @@
             </el-table-column>
             <el-table-column prop="timeF" label="结束时间" width="150">
             </el-table-column>
-            <el-table-column label="状态":formatter="formatter">
+            <el-table-column prop="zt" label="状态":formatter="formatter">
             </el-table-column>
         </el-table>
         <div class="pagination">
