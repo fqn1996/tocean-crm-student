@@ -32,7 +32,7 @@
             </el-collapse>
         </div>
         <div class="ur_footer">
-            <el-button id="qd">确定提交</el-button>
+            <el-button id="qd" @click="quedingtj2">确定提交</el-button>
         </div>
     </div>
 
@@ -57,6 +57,23 @@
             },
             handlePreview(file) {
                 console.log(file);
+            },
+            quedingtj2() {
+                this.$confirm('此操作将提交该文件, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    this.$message({
+                        type: 'success',
+                        message: '提交成功!(改功能并无真正提交成功)'
+                    });
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消提交'
+                    });
+                });
             }
         }
     }
