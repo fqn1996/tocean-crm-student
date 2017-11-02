@@ -69,7 +69,7 @@
                     },
                     {
                         icon: 'el-icon-star-on',
-                        index: 'basecharts',
+                        index: 'uploadresume',
                         title: '上传简历'
                     },
                     {
