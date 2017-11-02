@@ -38,17 +38,57 @@ export default new Router({
         component: resolve => require(['../components/page/Markdown.vue'], resolve)     // Vue-Quill-Editor组件
 },
 {
-      path: '/upload',
-      component: resolve => require(['../components/page/Upload.vue'], resolve)       // Vue-Core-Image-Upload组件
- },
-{
-    path: '/uploadresume',
-        component: resolve => require(['../components/page/UploadResume.vue'], resolve)       // Vue-Core-Image-Upload组件
+    path: '/upload',
+        component: resolve => require(['../components/page/Upload.vue'], resolve)       // Vue-Core-Image-Upload组件
 },
+            {
+                path: '/uploadresume',
+                component: resolve => require(['../components/page/UploadResume.vue'], resolve)       // Vue-Core-Image-Upload组件
+            },
 {
     path: '/basecharts',
         component: resolve => require(['../components/page/BaseCharts.vue'], resolve)   // vue-schart组件
 },
+            {
+                path: '/StudentFiles',
+                component: resolve => require(['../components/page/StudentFiles.vue'], resolve)   // 学员信息查询组件1
+            },
+            {
+                path: '/AttendanceCheck',
+                component: resolve => require(['../components/page/AttendanceCheck.vue'], resolve)   // 学员信息查询组件2
+            },
+            {
+                path: '/DisciplinaryRecords',
+                component: resolve => require(['../components/page/DisciplinaryRecords.vue'], resolve)   // 学员信息查询组件3
+            },
+            {
+                path: '/PraiseRecord',
+                component: resolve => require(['../components/page/PraiseRecord.vue'], resolve)   // 学员信息查询组件4
+            },
+            {
+                path: '/Homework',
+                component: resolve => require(['../components/page/Homework.vue'], resolve)   // 学员信息查询组件5
+            },
+            {
+                path: '/Assessment',
+                component: resolve => require(['../components/page/Assessment.vue'], resolve)   // 学员信息查询组件6
+            },
+            {
+                path: '/Management',
+                component: resolve => require(['../components/page/Management.vue'], resolve)   // 学员信息查询组件7
+            },
+            {
+                path: '/Speech',
+                component: resolve => require(['../components/page/Speech.vue'], resolve)   // 学员信息查询组件8
+            },
+            {
+                path: '/Groupdiscussion',
+                component: resolve => require(['../components/page/Groupdiscussion.vue'], resolve)   // 学员信息查询组件9
+            },
+            {
+                path: '/Score',
+                component: resolve => require(['../components/page/Score.vue'], resolve)   // 学员信息查询组件10
+            },
 {
     path: '/drag',
         component: resolve => require(['../components/page/DragList.vue'], resolve)    // 拖拽列表组件
