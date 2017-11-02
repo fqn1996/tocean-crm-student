@@ -17,7 +17,7 @@
         </div>
         <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
 
-            <el-table-column prop="date" label="序号" width="70">
+            <el-table-column prop="no" label="序号" width="70">
             </el-table-column>
             <el-table-column prop="name" label="学员" width="70">
             </el-table-column>
@@ -41,7 +41,7 @@
             </el-table-column>
             <el-table-column prop="score" label="技术能力分" width="120">
             </el-table-column>
-            <el-table-column prop="score" label="沟通能力分":formatter="formatter">
+            <el-table-column prop="score" label="沟通能力分">
             </el-table-column>
         </el-table>
         <div class="pagination">
@@ -75,21 +75,22 @@
             data(){
                 const self = this;
                 return self.tableData.filter(function(d){
-                    let is_del = false;
-                    for (let i = 0; i < self.del_list.length; i++) {
-                        if(d.name === self.del_list[i].name){
-                            is_del = true;
-                            break;
-                        }
-                    }
-                    if(!is_del){
-                        if(d.class.indexOf(self.select_cate) > -1 &&
-                            (d.name.indexOf(self.select_word) > -1 ||
-                            d.class.indexOf(self.select_word) > -1)
-                        ){
-                            return d;
-                        }
-                    }
+                    /*   let is_del = false;
+                     for (let i = 0; i < self.del_list.length; i++) {
+                     if(d.name === self.del_list[i].name){
+                     is_del = true;
+                     break;
+                     }
+                     }
+                     if(!is_del){
+                     if(d.address.indexOf(self.select_cate) > -1 &&
+                     (d.name.indexOf(self.select_word) > -1 ||
+                     d.address.indexOf(self.select_word) > -1)
+                     ){
+                     return d;
+                     }
+                     }*/
+                    return true;
                 })
             }
         },
@@ -101,7 +102,7 @@
             getData(){
                 let self = this;
                 if(process.env.NODE_ENV === 'development'){
-                    self.url = '/ms/table/list';
+                    self.url = '/ms/vue/list';
                 };
                 self.$axios.post(self.url, {page:self.cur_page}).then((res) => {
                     self.tableData = res.data.list;

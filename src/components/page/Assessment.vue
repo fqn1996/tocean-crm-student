@@ -11,14 +11,14 @@
                 <el-option key="1" label="1班" value="1班"></el-option>
                 <el-option key="2" label="2班" value="2班"></el-option>
             </el-select>
-            <el-input v-model="name" placeholder="学员" class="handle-input mr10"></el-input>&nbsp;&nbsp;&nbsp;
-            <el-input v-model="class1" placeholder="课程" class="handle-input mr10"></el-input>
+            <el-input  placeholder="学员" class="handle-input mr10"></el-input>&nbsp;&nbsp;&nbsp;
+            <el-input  placeholder="课程" class="handle-input mr10"></el-input>
 
             <el-button type="primary" icon="search" @click="search">搜索</el-button>
         </div>
         <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
 
-            <el-table-column prop="date" label="序号" sortable width="180">
+            <el-table-column prop="date" label="序号" width="180">
             </el-table-column>
             <el-table-column prop="name" label="学员" width="120">
             </el-table-column>
@@ -28,7 +28,7 @@
             </el-table-column>
             <el-table-column prop="times" label="考核日期" width="150">
             </el-table-column>
-            <el-table-column prop="title" label="考核类型":formatter="formatter">
+            <el-table-column prop="title" label="考核类型">
             </el-table-column>
             <el-table-column prop="score" label="分数" width="150">
             </el-table-column>
@@ -64,21 +64,22 @@
             data(){
                 const self = this;
                 return self.tableData.filter(function(d){
-                    let is_del = false;
-                    for (let i = 0; i < self.del_list.length; i++) {
-                        if(d.name === self.del_list[i].name){
-                            is_del = true;
-                            break;
-                        }
-                    }
-                    if(!is_del){
-                        if(d.class.indexOf(self.select_cate) > -1 &&
-                            (d.name.indexOf(self.select_word) > -1 ||
-                            d.class.indexOf(self.select_word) > -1)
-                        ){
-                            return d;
-                        }
-                    }
+                    /*   let is_del = false;
+                     for (let i = 0; i < self.del_list.length; i++) {
+                     if(d.name === self.del_list[i].name){
+                     is_del = true;
+                     break;
+                     }
+                     }
+                     if(!is_del){
+                     if(d.address.indexOf(self.select_cate) > -1 &&
+                     (d.name.indexOf(self.select_word) > -1 ||
+                     d.address.indexOf(self.select_word) > -1)
+                     ){
+                     return d;
+                     }
+                     }*/
+                    return true;
                 })
             }
         },
@@ -90,7 +91,7 @@
             getData(){
                 let self = this;
                 if(process.env.NODE_ENV === 'development'){
-                    self.url = '/ms/table/list';
+                    self.url = '/ms/vue/list';
                 };
                 self.$axios.post(self.url, {page:self.cur_page}).then((res) => {
                     self.tableData = res.data.list;

@@ -11,10 +11,10 @@
                 <el-option key="1" label="1班" value="1班"></el-option>
                 <el-option key="2" label="2班" value="2班"></el-option>
             </el-select>
-            <el-input v-model="name" placeholder="学员" class="handle-input mr10"></el-input>
-            <el-input v-model="timeHeader" placeholder="开始时间" class="handle-input mr10"></el-input>至
-            <el-input v-model="timefooter" placeholder="结束时间" class="handle-input mr10"></el-input>
-            <el-select v-model="select_cate1" placeholder="上课情况" class="handle-select mr10">
+            <el-input placeholder="学员" class="handle-input mr10"></el-input>
+            <el-input  placeholder="开始时间" class="handle-input mr10"></el-input>至
+            <el-input  placeholder="结束时间" class="handle-input mr10"></el-input>
+            <el-select v-model="select_cate" placeholder="上课情况" class="handle-select mr10">
                 <el-option key="1" label="正常" value="正常"></el-option>
                 <el-option key="2" label="请假" value="请假"></el-option>
                 <el-option key="3" label="迟到" value="迟到"></el-option>
@@ -25,9 +25,9 @@
             <el-button type="primary" icon="search" @click="search">搜索</el-button>
         </div>
         <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
-            <el-table-column prop="no" label="序号" sortable width="120">
+            <el-table-column prop="no" label="序号"  width="120">
             </el-table-column>
-            <el-table-column prop="date" label="日期" sortable width="180">
+            <el-table-column prop="date" label="日期"  width="180">
             </el-table-column>
             <el-table-column prop="name" label="学员" width="120">
             </el-table-column>
@@ -37,7 +37,7 @@
             </el-table-column>
             <el-table-column prop="timeF" label="结束时间" width="150">
             </el-table-column>
-            <el-table-column prop="zt" label="状态":formatter="formatter">
+            <el-table-column prop="zt" label="状态">
             </el-table-column>
         </el-table>
         <div class="pagination">
@@ -71,21 +71,22 @@
             data(){
                 const self = this;
                 return self.tableData.filter(function(d){
-                    let is_del = false;
-                    for (let i = 0; i < self.del_list.length; i++) {
-                        if(d.name === self.del_list[i].name){
-                            is_del = true;
-                            break;
-                        }
-                    }
-                    if(!is_del){
-                        if(d.class.indexOf(self.select_cate) > -1 &&
-                            (d.name.indexOf(self.select_word) > -1 ||
-                            d.class.indexOf(self.select_word) > -1)
-                        ){
-                            return d;
-                        }
-                    }
+                    /*   let is_del = false;
+                     for (let i = 0; i < self.del_list.length; i++) {
+                     if(d.name === self.del_list[i].name){
+                     is_del = true;
+                     break;
+                     }
+                     }
+                     if(!is_del){
+                     if(d.address.indexOf(self.select_cate) > -1 &&
+                     (d.name.indexOf(self.select_word) > -1 ||
+                     d.address.indexOf(self.select_word) > -1)
+                     ){
+                     return d;
+                     }
+                     }*/
+                    return true;
                 })
             }
         },
@@ -97,7 +98,7 @@
             getData(){
                 let self = this;
                 if(process.env.NODE_ENV === 'development'){
-                    self.url = '/ms/table/list';
+                    self.url = '/ms/vue/list';
                 };
                 self.$axios.post(self.url, {page:self.cur_page}).then((res) => {
                     self.tableData = res.data.list;
