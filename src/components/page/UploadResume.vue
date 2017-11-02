@@ -184,7 +184,10 @@
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        alert('submit!');
+                        this.$message({
+                            type: 'success',
+                            message: '提交成功!(该功能并无真正提交成功)'
+                        });
                     } else {
                         console.log('error submit!!');
                         return false;
@@ -195,6 +198,7 @@
                 this.$refs[formName].resetFields();
             }
         }
+
     }
 </script>
 <style>
