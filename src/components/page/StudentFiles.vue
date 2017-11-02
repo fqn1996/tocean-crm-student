@@ -29,13 +29,13 @@
             </el-table-column>
             <el-table-column prop="class" label="班级"  width="120">
             </el-table-column>
-            <el-table-column prop="timeH" label="学号" width="180">
+            <el-table-column prop="xuehao" label="学号" width="180">
             </el-table-column>
-            <el-table-column prop="timeF" label="性别" width="150">
+            <el-table-column prop="sex" label="性别" width="150">
             </el-table-column>
-            <el-table-column prop="timeF" label="学历" width="150">
+            <el-table-column prop="xueli" label="学历" width="150">
             </el-table-column>
-            <el-table-column label="联系电话":formatter="formatter">
+            <el-table-column prop="phone" label="联系电话":formatter="formatter">
 
             </el-table-column>
         </el-table>

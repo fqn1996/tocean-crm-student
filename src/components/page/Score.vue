@@ -23,25 +23,25 @@
             </el-table-column>
             <el-table-column prop="class" label="班级"  width="70">
             </el-table-column>
-            <el-table-column prop="" label="考勤扣分" width="100">
+            <el-table-column prop="score" label="考勤扣分" width="100">
             </el-table-column>
-            <el-table-column prop="" label="违纪扣分" width="100">
+            <el-table-column prop="score" label="违纪扣分" width="100">
             </el-table-column>
-            <el-table-column prop="" label="表扬加分" width="100">
+            <el-table-column prop="score" label="表扬加分" width="100">
             </el-table-column>
-            <el-table-column prop="" label="班级考评加分" width="120">
+            <el-table-column prop="score" label="班级考评加分" width="120">
             </el-table-column>
-            <el-table-column prop="" label="原始分" width="80">
+            <el-table-column prop="score" label="原始分" width="80">
             </el-table-column>
-            <el-table-column prop="" label="职业素质分" width="120">
+            <el-table-column prop="score" label="职业素质分" width="120">
             </el-table-column>
-            <el-table-column prop="" label="项目分" width="80">
+            <el-table-column prop="score" label="项目分" width="80">
             </el-table-column>
-            <el-table-column prop="" label="作业分" width="80">
+            <el-table-column prop="score" label="作业分" width="80">
             </el-table-column>
-            <el-table-column prop="" label="技术能力分" width="120">
+            <el-table-column prop="score" label="技术能力分" width="120">
             </el-table-column>
-            <el-table-column prop="" label="沟通能力分":formatter="formatter">
+            <el-table-column prop="score" label="沟通能力分":formatter="formatter">
             </el-table-column>
         </el-table>
         <div class="pagination">

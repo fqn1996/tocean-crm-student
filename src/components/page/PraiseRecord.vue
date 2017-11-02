@@ -12,24 +12,25 @@
                 <el-option key="2" label="2班" value="2班"></el-option>
             </el-select>
             <el-input v-model="name" placeholder="学员" class="handle-input mr10"></el-input>&nbsp;&nbsp;&nbsp;
-            <el-input v-model="timeHeader" placeholder="开始时间" class="handle-input mr10"></el-input>至
-            <el-input v-model="timefooter" placeholder="结束时间" class="handle-input mr10"></el-input>
+            <el-input v-model="timeH" placeholder="开始时间" class="handle-input mr10"></el-input>至
+            <el-input v-model="timeF" placeholder="结束时间" class="handle-input mr10"></el-input>
 
             <el-button type="primary" icon="search" @click="search">搜索</el-button>
         </div>
         <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
 
-            <el-table-column prop="date" label="序号" sortable width="180">
+            <el-table-column prop="no" label="序号" sortable width="180">
             </el-table-column>
             <el-table-column prop="name" label="学员" width="120">
             </el-table-column>
             <el-table-column prop="class" label="班级"  width="120">
             </el-table-column>
-            <el-table-column prop="" label="表扬时间" width="150">
+
+            <el-table-column prop="prtime" label="表扬时间" width="150">
             </el-table-column>
-            <el-table-column prop="" label="表扬原因" width="150">
+            <el-table-column prop="prresult" label="表扬原因" width="150">
             </el-table-column>
-            <el-table-column label="表扬加分":formatter="formatter">
+            <el-table-column prop="score" label="表扬加分":formatter="formatter">
 
             </el-table-column>
         </el-table>
