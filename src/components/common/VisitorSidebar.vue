@@ -2,14 +2,34 @@
     <div class="content" width="700px">
         <img src="../../image/visitor03.jpg" height="500">
         <div class="textContent">
-        <h1>manage-system</h1>
-        <p>基于Vue.js 2.x系列 + Element UI 的后台管理系统解决方案</p>
-        <h2>前言</h2>
-        <p>之前在公司用了Vue + Element组件库做了个后台管理系统，基本很多组件可以直接引用组件库的，但是也有一些需求无法满足。像图片裁剪上传、富文本编辑器、图表等这些在后台管理系统中很常见的功能，就需要引用其他的组件才能完成。从寻找组件，到使用组件的过程中，遇到了很多问题，也积累了宝贵的经验。所以我就把开发这个后台管理系统的经验，总结成这个后台管理系统解决方案。</p>
-        <p>该方案作为一套多功能的后台框架模板，适用于绝大部分的后台管理系统（Web Management System）开发。基于vue.js,使用vue-cli脚手架快速生成项目目录，引用Element UI组件库，方便开发快速简洁好看的组件。分离颜色样式，支持手动切换主题色，而且很方便使用自定义主题色。</p>
-        <h2>功能</h2>
-        <p>之前在公司用了Vue + Element组件库做了个后台管理系统，基本很多组件可以直接引用组件库的，但是也有一些需求无法满足。像图片裁剪上传、富文本编辑器、图表等这些在后台管理系统中很常见的功能，就需要引用其他的组件才能完成。从寻找组件，到使用组件的过程中，遇到了很多问题，也积累了宝贵的经验。所以我就把开发这个后台管理系统的经验，总结成这个后台管理系统解决方案。</p>
-        <p>该方案作为一套多功能的后台框架模板，适用于绝大部分的后台管理系统（Web Management System）开发。基于vue.js,使用vue-cli脚手架快速生成项目目录，引用Element UI组件库，方便开发快速简洁好看的组件。分离颜色样式，支持手动切换主题色，而且很方便使用自定义主题色。</p>
+            <div class="ms-doc">
+                <h3>使用说明</h3>
+                <article>
+                    <h1>拓胜学生系统管理端</h1>
+                    <p>一个简单、快捷的系统管理端</p>
+                    <h2>功能</h2>
+                    <h4>
+                        <el-checkbox disabled checked>登录/注销</el-checkbox>
+                        <br>
+                        <el-checkbox disabled checked>提交作业</el-checkbox>
+                        <br>
+                        <el-checkbox disabled checked>填写日报、周报</el-checkbox>
+                        <br>
+                        <el-checkbox disabled checked>查看周报、日报</el-checkbox>
+                        <br>
+                        <el-checkbox disabled checked>填写问卷</el-checkbox>
+                        <br>
+                        <el-checkbox disabled checked>查看历史问卷</el-checkbox>
+                        <br>
+                        <el-checkbox disabled checked>上传简历</el-checkbox>
+                        <br>
+                        <el-checkbox disabled checked>查看简历</el-checkbox>
+                        <br>
+                        <el-checkbox disabled checked>学员信息查询</el-checkbox>
+                        <br>
+                    </h4>
+                </article>
+            </div>
         </div>
     </div>
 </template>
@@ -18,6 +38,50 @@
 <style>
     .textContent{
         width:800px;
+    }
+    .ms-doc{
+        width:100%;
+        max-width: 980px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    .ms-doc h3{
+        padding: 9px 10px 10px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 17px;
+        background-color: #f5f5f5;
+        border: 1px solid #d8d8d8;
+        border-bottom: 0;
+        border-radius: 3px 3px 0 0;
+    }
+    .ms-doc article{
+        padding: 45px;
+        word-wrap: break-word;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    .ms-doc article h1{
+        font-size:32px;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    .ms-doc article h2 {
+        margin: 24px 0 16px;
+        font-weight: 600;
+        line-height: 1.25;
+        padding-bottom: 7px;
+        font-size: 24px;
+        border-bottom: 1px solid #eee;
+    }
+    .ms-doc article p{
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    .ms-doc article .el-checkbox{
+        margin-bottom: 5px;
     }
 </style>
 
