@@ -18,13 +18,22 @@ export default new Router({
         component: resolve => require(['../components/page/Readme.vue'], resolve)
 },
 {
-    path: '/basetable',
-        component: resolve => require(['../components/page/BaseTable.vue'], resolve)
+    path: '/mybasetable',
+        component: resolve => require(['../components/page/MyBaseTable.vue'], resolve)
 },
 {
-    path: '/vuetable',
-        component: resolve => require(['../components/page/VueTable.vue'], resolve)     // vue-datasource组件
+    path: '/myvuetable',
+        component: resolve => require(['../components/page/MyVueTable.vue'], resolve)     // vue-datasource组件
 },
+            {
+                path: '/myhistoryday',
+                component: resolve => require(['../components/page/MyHistoryDay.vue'], resolve)
+            },
+            {
+                path: '/myhistoryweek',
+                component: resolve => require(['../components/page/MyHistoryWeek.vue'], resolve)     // vue-datasource组件
+            },
+
 {
     path: '/baseform',
         component: resolve => require(['../components/page/BaseForm.vue'], resolve)
@@ -44,6 +53,10 @@ export default new Router({
             {
                 path: '/uploadresume',
                 component: resolve => require(['../components/page/UploadResume.vue'], resolve)       // Vue-Core-Image-Upload组件
+            },
+            {
+                path: '/application',
+                component: resolve => require(['../components/page/Application.vue'], resolve)       // Vue-Core-Image-Upload组件
             },
 {
     path: '/basecharts',

@@ -34,20 +34,21 @@
                         index: '2',
                         title: '提交报告',
                         subs: [
+
                             {
-                                index: 'basetable',
+                                index: 'mybasetable',
                                 title: '提交日报'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'myvuetable',
                                 title: '提交周报'
                             },
                             {
-                                index: 'historyday',
+                                index: 'myhistoryday',
                                 title: '历史日报'
                             },
                             {
-                                index: 'historyweek',
+                                index: 'myhistoryweek',
                                 title: '历史周报'
                             }
                         ]
@@ -71,6 +72,11 @@
                         icon: 'el-icon-star-on',
                         index: 'uploadresume',
                         title: '上传简历'
+                    },
+                    {
+                        icon: 'el-icon-star-on',
+                        index: 'application',
+                        title: '就业申请'
                     },
                     {
                         icon: 'el-icon-date',
