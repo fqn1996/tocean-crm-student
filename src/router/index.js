@@ -46,6 +46,14 @@ export default new Router({
     path: '/markdown',
         component: resolve => require(['../components/page/Markdown.vue'], resolve)     // Vue-Quill-Editor组件
 },
+            {
+                path: '/wirtequestionnaire',
+                component: resolve => require(['../components/page/WirteQuestionnaire.vue'], resolve)     // Vue-Quill-Editor组件
+            },
+            {
+                path: '/questionnairehistory',
+                component: resolve => require(['../components/page/QuestionnaireHistory.vue'], resolve)     // Vue-Quill-Editor组件
+            },
 {
     path: '/upload',
         component: resolve => require(['../components/page/Upload.vue'], resolve)       // Vue-Core-Image-Upload组件
@@ -101,6 +109,10 @@ export default new Router({
             {
                 path: '/Score',
                 component: resolve => require(['../components/page/Score.vue'], resolve)   // 学员信息查询组件10
+            },
+            {
+                path: '/FinHomework',
+                component: resolve => require(['../components/page/FinHomework.vue'], resolve)   // 提交作业
             },
 {
     path: '/drag',

@@ -6,16 +6,17 @@
                 <el-breadcrumb-item>学员档案</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
-        <div class="handle-box">
-            <el-button type="primary" icon="delete" class="handle-del mr10" @click="delAll">批量删除</el-button>
-            <el-select v-model="select_cate" placeholder="班级" class="handle-select mr10">
+        <div class="handle-box">>
+
+            <el-button  type="primary" icon="delete" class="handle-del mr10" @click="delAll">批量删除</el-button>
+            <el-select  v-model="select_cate"  placeholder="班级" class="handle-select mr10">
                 <el-option key="1" label="1班" value="1班"></el-option>
                 <el-option key="2" label="2班" value="2班"></el-option>
             </el-select>
-            <el-input v-model="name" placeholder="学员" class="handle-input mr10"></el-input>
-            <el-input v-model="timeHeader" placeholder="毕业学校" class="handle-input mr10"></el-input>至
-            <el-input v-model="timefooter" placeholder="联系电话" class="handle-input mr10"></el-input>
-            <el-select v-model="select_cate1" placeholder="性别" class="handle-select mr10">
+            <el-input placeholder="学员" class="handle-input mr10"></el-input>
+            <el-input  placeholder="毕业学校" class="handle-input mr10"></el-input>至
+            <el-input  placeholder="联系电话" class="handle-input mr10"></el-input>
+            <el-select  v-model="select_cate"  placeholder="性别" class="handle-select mr10">
                 <el-option key="1" label="男" value="男"></el-option>
                 <el-option key="2" label="女" value="女"></el-option>
             </el-select>
@@ -35,7 +36,7 @@
             </el-table-column>
             <el-table-column prop="xueli" label="学历" width="150">
             </el-table-column>
-            <el-table-column prop="phone" label="联系电话":formatter="formatter">
+            <el-table-column prop="phone" label="联系电话">
 
             </el-table-column>
         </el-table>
@@ -70,21 +71,22 @@
             data(){
                 const self = this;
                 return self.tableData.filter(function(d){
-                    let is_del = false;
+                 /*   let is_del = false;
                     for (let i = 0; i < self.del_list.length; i++) {
-                        if(d.no === self.del_list[i].no){
+                        if(d.name === self.del_list[i].name){
                             is_del = true;
                             break;
                         }
                     }
                     if(!is_del){
-                        if(d.name.indexOf(self.select_cate) > -1 &&
-                            (d.no.indexOf(self.select_word) > -1 ||
-                            d.name.indexOf(self.select_word) > -1)
+                        if(d.address.indexOf(self.select_cate) > -1 &&
+                            (d.name.indexOf(self.select_word) > -1 ||
+                            d.address.indexOf(self.select_word) > -1)
                         ){
                             return d;
                         }
-                    }
+                    }*/
+                 return true;
                 })
             }
         },
@@ -96,7 +98,7 @@
             getData(){
                 let self = this;
                 if(process.env.NODE_ENV === 'development'){
-                    self.url = '/ms/table/list';
+                    self.url = '/ms/vue/list';
                 };
                 self.$axios.post(self.url, {page:self.cur_page}).then((res) => {
                     self.tableData = res.data.list;

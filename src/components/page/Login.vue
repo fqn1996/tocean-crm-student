@@ -1,10 +1,10 @@
 <template>
     <div class="login-wrap">
-        <div class="ms-title">学生管理系统</div>
+        <div class="ms-title">拓胜学生管理系统</div>
         <div class="ms-login">
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
                 <el-form-item prop="username">
-                    <el-input v-model="ruleForm.username" placeholder="请输入学号"></el-input>
+                    <el-input v-model.number="ruleForm.username" placeholder="请输入学号"></el-input>
                 </el-form-item>
                 <el-form-item prop="password">
                     <el-input type="password" placeholder="请输入密码" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
@@ -17,7 +17,7 @@
                 <!--<div class="login-btn">-->
                 <!--<el-button type="primary" @click="visitorSubmitForm">游客登录</el-button>-->
                 <!--</div>-->
-                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 学号和密码随便填。</p>
+                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 学号是数字和密码随便填。</p>
             </el-form>
         </div>
     </div>
@@ -33,7 +33,8 @@
                 },
                 rules: {
                     username: [
-                        { required: true, message: '学号不能为空', trigger: 'blur' }
+                        { required: true, message: '学号不能为空'  },
+                        { type: 'number', message: '学号必须为数字值',trigger: 'blur'}
                     ],
                     password: [
                         { required: true, message: '密码不能为空', trigger: 'blur' }
