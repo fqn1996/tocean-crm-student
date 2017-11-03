@@ -37,6 +37,14 @@ export default new Router({
     path: '/markdown',
         component: resolve => require(['../components/page/Markdown.vue'], resolve)     // Vue-Quill-Editor组件
 },
+            {
+                path: '/wirtequestionnaire',
+                component: resolve => require(['../components/page/WirteQuestionnaire.vue'], resolve)     // Vue-Quill-Editor组件
+            },
+            {
+                path: '/questionnairehistory',
+                component: resolve => require(['../components/page/QuestionnaireHistory.vue'], resolve)     // Vue-Quill-Editor组件
+            },
 {
     path: '/upload',
         component: resolve => require(['../components/page/Upload.vue'], resolve)       // Vue-Core-Image-Upload组件

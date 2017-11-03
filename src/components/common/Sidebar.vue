@@ -58,11 +58,11 @@
                         title: '问卷调查',
                         subs: [
                             {
-                                index: 'baseform',
+                                index: 'wirtequestionnaire',
                                 title: '填写问卷'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'questionnairehistory',
                                 title: '历史问卷'
                             },
                         ]
