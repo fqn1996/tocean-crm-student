@@ -24,40 +24,40 @@
                         </el-row>
                         <el-row :gutter="20">
                             <el-col :span="6">
-                                <el-form-item label="出生年月">
-                                    <el-input v-model="ruleForm.name" width="50px"></el-input>
+                                <el-form-item label="出生年月" prop="year">
+                                    <el-input v-model="ruleForm.year" width="50px"></el-input>
                                 </el-form-item>
                             </el-col>
                             <el-col :span="6">
-                            <el-form-item label="民族" prop="name">
-                                    <el-input v-model="ruleForm.name" width="50px"></el-input>
+                            <el-form-item label="民族" prop="nation">
+                                    <el-input v-model="ruleForm.nation" width="50px"></el-input>
                             </el-form-item>
                             </el-col>
                         </el-row>
                         <el-row :gutter="20">
                             <el-col :span="6">
-                                <el-form-item label="籍贯">
-                                    <el-input v-model="ruleForm.name" width="50px"></el-input>
+                                <el-form-item label="籍贯" prop="jiguan">
+                                    <el-input v-model="ruleForm.jiguan" width="50px"></el-input>
                                 </el-form-item>
                             </el-col>
                             <el-col :span="6">
-                                <el-form-item label="政治面貌" prop="name">
-                                    <el-input v-model="ruleForm.name" width="50px"></el-input>
+                                <el-form-item label="政治面貌" prop="zzmianmao">
+                                    <el-input v-model="ruleForm.zzmianmao" width="50px"></el-input>
                                 </el-form-item>
                             </el-col>
                         </el-row>
                         <el-row :gutter="20">
                             <el-col :span="6">
-                        <el-form-item label="学历" prop="region">
-                            <el-select v-model="ruleForm.region" placeholder="请选择学历">
+                        <el-form-item label="学历" prop="xueli">
+                            <el-select v-model="ruleForm.xueli" placeholder="请选择学历">
                                 <el-option label="本科" value="benke"></el-option>
                                 <el-option label="大专" value="zhuanke"></el-option>
                             </el-select>
                         </el-form-item>
                             </el-col>
                             <el-col :span="6">
-                        <el-form-item label="毕业院校" required>
-                            <el-input v-model="ruleForm.name" width="50px"></el-input>
+                        <el-form-item label="毕业院校" prop="byschool">
+                            <el-input v-model="ruleForm.byschool" width="50px"></el-input>
                         </el-form-item>
                             </el-col>
                         </el-row>
@@ -125,6 +125,12 @@
                 ruleForm: {
                     name: '',
                     region: '',
+                    year:'',
+                    nation:'',
+                    jiguan:'',
+                    zzmianmao:'',
+                    xueli:'',
+                    byschool:'',
                     value8: '',
                     type: [],
                     desc: ''
