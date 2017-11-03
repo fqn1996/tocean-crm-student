@@ -26,7 +26,7 @@
                 items: [
                     {
                         icon: 'el-icon-setting',
-                        index: 'readme',
+                        index: 'FinHomework',
                         title: '提交作业'
                     },
                     {

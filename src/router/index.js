@@ -97,6 +97,10 @@ export default new Router({
                 path: '/Score',
                 component: resolve => require(['../components/page/Score.vue'], resolve)   // 学员信息查询组件10
             },
+            {
+                path: '/FinHomework',
+                component: resolve => require(['../components/page/FinHomework.vue'], resolve)   // 提交作业
+            },
 {
     path: '/drag',
         component: resolve => require(['../components/page/DragList.vue'], resolve)    // 拖拽列表组件
