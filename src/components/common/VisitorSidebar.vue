@@ -1,10 +1,11 @@
 <template>
     <div class="content" width="700px">
-        <img src="../../image/visitor03.jpg" height="500">
+
         <div class="textContent">
             <div class="ms-doc">
                 <h3>使用说明</h3>
                 <article>
+                    <img src="../../image/visitor03.jpg" height="450">
                     <h1>拓胜学生系统管理端</h1>
                     <p>一个简单、快捷的系统管理端</p>
                     <h2>功能</h2>
