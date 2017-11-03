@@ -1,7 +1,10 @@
 <template>
     <div class="ur_content">
-        <div class="ur_header">
-            当前功能:&nbsp;&nbsp;<b>提交作业</b>
+        <div class="crumbs">
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item><i class="el-icon-menu"></i>作业</el-breadcrumb-item>
+                <el-breadcrumb-item>提交作业</el-breadcrumb-item>
+            </el-breadcrumb>
         </div>
         <div class="ur_header2" >
 

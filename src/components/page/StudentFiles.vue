@@ -6,7 +6,7 @@
                 <el-breadcrumb-item>学员档案</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
-        <div class="handle-box">>
+        <div class="handle-box">
 
             <el-button  type="primary" icon="delete" class="handle-del mr10" @click="delAll">批量删除</el-button>
             <el-select  v-model="select_cate"  placeholder="班级" class="handle-select mr10">

@@ -1,8 +1,11 @@
 <template>
     <div class="ur_content">
-    <div class="ur_header">
-      当前功能:&nbsp;&nbsp;<b>历史问卷</b>
-       </div>
+        <div class="crumbs">
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item><i class="el-icon-menu"></i> 问卷调查</el-breadcrumb-item>
+                <el-breadcrumb-item>历史问卷</el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
         <div class="ur_header">
             你已经填写1份问卷
         </div>

@@ -1,8 +1,11 @@
 <template>
     <div class="ur_content">
-    <div class="ur_header">
-      当前功能:&nbsp;&nbsp;<b>上传简介信息</b>
-       </div>
+        <div class="crumbs">
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item><i class="el-icon-menu"></i> 上传简历</el-breadcrumb-item>
+                <el-breadcrumb-item>上传简介信息</el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
         <div class="ur_header2">
             <el-collapse v-model="activeNames" @change="handleChange"  accordion>
                 <el-collapse-item title="基本资料 (+ 单击标题栏展开)" name="1">

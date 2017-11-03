@@ -6,48 +6,47 @@
                 <el-breadcrumb-item>历史日报</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
-
-        <quill-editor ref="myTextEditor" v-model="content" :config="editorOption"></quill-editor>
-        <el-button class="editor-btn" type="primary" @click="submit">提交</el-button>
+        <el-collapse accordion>
+            <el-collapse-item>
+                <template slot="title">第一个日报</template>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;环球网4月20日消息，台湾《中时电子报》称越南武装巡逻艇在3月22日及26日，曾两度接近南沙太平岛，台湾方面海巡警艇驱离时，遭对方鸣枪挑衅，台方随后也开枪示警。太平岛的台湾守军立刻进入紧急状态准备开火还击。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;据了解，这起冲突撼动台湾“总统府”及“国安”高层，台“国安会”召开跨部会紧急会议，要求守军不得动武，同时也透过“外交”途径向越南表达最严重抗议，这不但是台、越双方首次武装部队正面冲突，更让诡谲多变的南沙冲突，升温到有史以来最高</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中广网青岛4月22日消息（记者穆亮龙）4月22日上午8点，“海上联合-2012”中俄海上联合军事演习开始仪式在北海舰队的作战指挥模拟训练中心联合导演部举行。演习随后进入指挥所推演阶段</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开始仪式主要包括4个环节。第一个是中方总导演海军副司令员丁一平海军中将和俄方总导演俄海军副参谋长苏哈诺夫海军少将一起为演习标志揭幕。第二个是双方总导演各自发表简短致辞。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;之后进入第三个环节，参演人员迅速就位。这个环节中，视讯系统发挥了重要作用。从导演部的三块大屏幕和六块小屏幕上可以看到，设在不同位置的3个舰艇编队指挥所和联合指挥部及联合导演部间的相互沟通都是通过视讯系统进行。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接下来第四个环节，就是由俄方总导演宣布演习正式开始，中方总导演下达演练任务。</div>
+                <br/>
+                <el-button type="primary">修改</el-button>
+                <el-button type="danger">删除</el-button>
+            </el-collapse-item>
+            <el-collapse-item title="第二个日报">
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“今日印度”网站2日称，印度海军参谋长苏尼尔·兰巴接受该媒体专访时表示，面对中国在海洋上“秀肌肉”，印度已把守了印度洋的每个出入口。兰巴说，除了在印度洋的东部主要入口马六甲海峡和巽他海峡部署军舰，印度还与印尼、马来西亚、泰国等国家展开联合巡逻，“巡逻的频率和(军事)资产部署的数量都可能增加”。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“今日印度”称，兰巴是在首届“果阿海洋会议”举行期间接受采访的，为期两天的会议1日开幕，十多个印度洋海域国家派员参与，目的是共同商讨应对印度洋地区出现的威胁。兰巴表示，“由于中国的海洋侵犯活动增加”，印度与沿岸国家海军正在探讨利益重叠的领域并进行合作。他还称，为增强印度海军与“友军”的联系，印度新创立了“海洋外交基金”，印度政府和海军将通过此基金，为较小的国家提供小型战舰和巡逻艇。印度海军还能帮助“友军”进行军事训练。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;印度《经济时报》称，1日在果阿海洋会议开幕当天，印度女防长西塔拉曼未点名具体国家，表达了对“域外国家军事化印度洋”的担忧，她表示，“域外国家以这样或那样的借口，在印度洋保持近乎永久的军事存在”，为维持长期行动，这些域外国家建立前哨基地，修建能两用的基础设施，这种军事化进展增加了地区的复杂性。“今日印度”认为，西塔拉曼的话是在暗指中国。印度洋海域已成为军事化最严重的海域之一，至少活跃着100艘军舰，其中包括中国海军舰艇。报道称，2017年，至少有14艘中国战舰和潜艇穿过印度洋。印度海军正在加紧推出新的印度洋兵力部署计划，在关键海上交通要道加大永久军事部署，扩大印度海军在印度洋的航迹。</div>
+                <br/>
+                <el-button type="primary">修改</el-button>
+                <el-button type="danger">删除</el-button>
+            </el-collapse-item>
+            <el-collapse-item title="第三个日报">
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地时间11月1日，加拿大温哥华市议会经过表决，通过就当年排斥、歧视华裔历史向华人社区道歉的决议。该市将在2018年4月正式发布官方道歉，道歉将使用台山话方言，书面文本包括英文、简体和繁体中文。</div>
+                　　            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;据CBC报道，温哥华市长罗伯森在表决后发表演讲称，“非常赞同这一决议”，温哥华市政府应对昔日有针对性地歧视华人政策负责，表示诚恳道歉。这些政策对城市发展和社区建设造成消极负面的影响，且某些影响至今仍未完全消除。</div>
+                　　            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自1886年至1947年，温哥华市政府先后通过一系列令人发指的排华法案、政策，包括片面剥夺华裔公民权、限制华人拥有不动产、限制华人租借商铺、排斥华裔进入某些高薪就业领域等。加拿大联邦政府也通过向华人征收“人头税”和《排华法案》，限制华人入境。</div>
+                <br/>
+                <el-button type="primary">修改</el-button>
+                <el-button type="danger">删除</el-button>
+            </el-collapse-item>
+            <el-collapse-item title="第四个日报">
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“今日印度”网站2日称，印度海军参谋长苏尼尔·兰巴接受该媒体专访时表示，面对中国在海洋上“秀肌肉”，印度已把守了印度洋的每个出入口。兰巴说，除了在印度洋的东部主要入口马六甲海峡和巽他海峡部署军舰，印度还与印尼、马来西亚、泰国等国家展开联合巡逻，“巡逻的频率和(军事)资产部署的数量都可能增加”。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“今日印度”称，兰巴是在首届“果阿海洋会议”举行期间接受采访的，为期两天的会议1日开幕，十多个印度洋海域国家派员参与，目的是共同商讨应对印度洋地区出现的威胁。兰巴表示，“由于中国的海洋侵犯活动增加”，印度与沿岸国家海军正在探讨利益重叠的领域并进行合作。他还称，为增强印度海军与“友军”的联系，印度新创立了“海洋外交基金”，印度政府和海军将通过此基金，为较小的国家提供小型战舰和巡逻艇。印度海军还能帮助“友军”进行军事训练。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;印度《经济时报》称，1日在果阿海洋会议开幕当天，印度女防长西塔拉曼未点名具体国家，表达了对“域外国家军事化印度洋”的担忧，她表示，“域外国家以这样或那样的借口，在印度洋保持近乎永久的军事存在”，为维持长期行动，这些域外国家建立前哨基地，修建能两用的基础设施，这种军事化进展增加了地区的复杂性。“今日印度”认为，西塔拉曼的话是在暗指中国。印度洋海域已成为军事化最严重的海域之一，至少活跃着100艘军舰，其中包括中国海军舰艇。报道称，2017年，至少有14艘中国战舰和潜艇穿过印度洋。印度海军正在加紧推出新的印度洋兵力部署计划，在关键海上交通要道加大永久军事部署，扩大印度海军在印度洋的航迹。</div>
+                <br/>
+                <el-button type="primary">修改</el-button>
+                <el-button type="danger">删除</el-button>
+            </el-collapse-item>
+        </el-collapse>
     </div>
 </template>
 
-<script>
-    import { quillEditor } from 'vue-quill-editor';
-    export default {
-        data: function(){
-            return {
-                content: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;环球网4月20日消息，台湾《中时电子报》称越南武装巡逻艇在3月22日及26日，曾两度接近南沙太平岛，台湾方面海巡警艇驱离时，遭对方鸣枪挑衅，台方随后也开枪示警。太平岛的台湾守军立刻进入紧急状态准备开火还击。<br/>' +
-
-
-
-                '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;据了解，这起冲突撼动台湾“总统府”及“国安”高层，台“国安会”召开跨部会紧急会议，要求守军不得动武，同时也透过“外交”途径向越南表达最严重抗议，这不但是台、越双方首次武装部队正面冲突，更让诡谲多变的南沙冲突，升温到有史以来最高',
-
-
-                editorOption: {
-                    // something config
-                }
-            }
-        },
-        components: {
-            quillEditor
-        },
-        methods: {
-            onEditorChange({ editor, html, text }) {
-                this.content = html;
-            },
-            submit(){
-                console.log(this.content);
-                this.$message.success('提交成功！');
-            }
-        },
-        computed: {
-            editor() {
-                return this.$refs.myTextEditor.quillEditor;
-            }
-        }
-    }
-</script>
 <style scoped>
     .editor-btn{
         margin-top: 20px;

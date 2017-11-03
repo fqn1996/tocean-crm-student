@@ -25,12 +25,12 @@
             return {
                 items: [
                     {
-                        icon: 'el-icon-setting',
+                        icon: 'el-icon-document',
                         index: 'FinHomework',
                         title: '提交作业'
                     },
                     {
-                        icon: 'el-icon-menu',
+                        icon: 'el-icon-edit',
                         index: '2',
                         title: '提交报告',
                         subs: [
@@ -74,12 +74,12 @@
                         title: '上传简历'
                     },
                     {
-                        icon: 'el-icon-star-on',
+                        icon: 'el-icon-message',
                         index: 'application',
                         title: '就业申请'
                     },
                     {
-                        icon: 'el-icon-date',
+                        icon: 'el-icon-menu',
                         index: '4',
                         title: '学员信息查询',
                         subs: [
