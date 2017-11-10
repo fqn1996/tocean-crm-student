@@ -38,6 +38,10 @@ module.exports = {
             '/ms':{
                 target: 'https://www.easy-mock.com/mock/59fac1c140e64216b25107d0',
                 changeOrigin: true
+            },
+            '/student':{
+                target: 'http://192.168.4.80:8090',
+                changeOrigin: true
             }
         },
         // CSS Sourcemaps off by default because relative paths are "buggy"

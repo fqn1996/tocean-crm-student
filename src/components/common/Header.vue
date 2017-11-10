@@ -8,6 +8,7 @@
                     {{username}}
                 </span>
                 <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item command="profile">个人档案</el-dropdown-item>
                     <el-dropdown-item command="loginout">退出</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
@@ -23,15 +24,18 @@
         },
         computed:{
             username(){
-                let username = localStorage.getItem('ms_username');
+                let username = localStorage.getItem('USERNAME');
                 return username ? username : this.name;
             }
         },
         methods:{
             handleCommand(command) {
                 if(command == 'loginout'){
-                    localStorage.removeItem('ms_username')
+                    localStorage.removeItem('USERNAME');
+                    localStorage.removeItem('JWT_TOKEN')
                     this.$router.push('/VisitorHome');
+                }else  if(command == 'profile'){
+                    this.$router.push('/profile');
                 }
             }
         }

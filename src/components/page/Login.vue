@@ -4,7 +4,7 @@
         <div class="ms-login">
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
                 <el-form-item prop="username">
-                    <el-input v-model.number="ruleForm.username" placeholder="请输入学号"></el-input>
+                    <el-input v-model="ruleForm.username" placeholder="请输入学号"></el-input>
                 </el-form-item>
                 <el-form-item prop="password">
                     <el-input type="password" placeholder="请输入密码" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
@@ -17,7 +17,7 @@
                 <!--<div class="login-btn">-->
                 <!--<el-button type="primary" @click="visitorSubmitForm">游客登录</el-button>-->
                 <!--</div>-->
-                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 学号是数字和密码随便填。</p>
+                <p style="font-size:12px;line-height:30px;color:#999;">{{errorMsg}}</p>
             </el-form>
         </div>
     </div>
@@ -34,12 +34,14 @@
                 rules: {
                     username: [
                         { required: true, message: '学号不能为空'  },
-                        { type: 'number', message: '学号必须为数字值',trigger: 'blur'}
+/*                        { type: 'number', message: '学号必须为数字值',trigger: 'blur'}*/
                     ],
                     password: [
                         { required: true, message: '密码不能为空', trigger: 'blur' }
                     ]
-                }
+                },
+                url:"/student/login",
+                errorMsg:'Tips : 学号是数字和密码随便填。'
             }
         },
         methods: {
@@ -47,8 +49,20 @@
                 const self = this;
                 self.$refs[formName].validate((valid) => {
                     if (valid) {
-                        localStorage.setItem('ms_username',self.ruleForm.username);
-                        self.$router.push('/readme');
+                        let param = {
+                            username:self.ruleForm.username,
+                            password:self.ruleForm.password
+                        };
+                        self.$axios.post(self.url, param).then((res) => {
+                           if(res.data.success){
+                               localStorage.setItem('USERNAME',self.ruleForm.username);
+                               localStorage.setItem('JWT_TOKEN',res.data.result);
+                               self.$router.push('/readme');
+                           }else{
+                               self.data.errorMsg = res.data.error;
+                           }
+                        })
+
                     } else {
                         console.log('error submit!!');
                         return false;

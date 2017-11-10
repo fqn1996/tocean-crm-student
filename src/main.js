@@ -8,6 +8,18 @@ import 'element-ui/lib/theme-default/index.css';    // 默认主题
 import "babel-polyfill";
 
 Vue.use(ElementUI);
+// http request 拦截器
+axios.interceptors.request.use(
+    config => {
+        if (localStorage.JWT_TOKEN) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
+            config.headers.Authorization = `${localStorage.JWT_TOKEN}`;
+        }
+        return config;
+    },
+    err => {
+        return Promise.reject(err);
+    });
+
 Vue.prototype.$axios = axios;
 new Vue({
     router,
